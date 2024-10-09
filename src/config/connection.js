@@ -1,7 +1,9 @@
 import sqlite3  from 'sqlite3';
+const sql3 = sqlite3.verbose();
+
 const dbName = 'myDatabase.db'
 
-let db = new sqlite3.Database( dbName, (err) => {
+let db = new sql3.Database( dbName, (err) => {
     if(err){
         console.error(err.message)
     }
